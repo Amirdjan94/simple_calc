@@ -1,6 +1,7 @@
 import model.Adder;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class AdderClassTest {
 
@@ -9,12 +10,12 @@ public class AdderClassTest {
         Adder adder = new Adder();
         int actualResult = adder.adder(5,5);
         int expectedResult = 10;
-        Assertions.assertEquals(expectedResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     public void adderOneNumberIsNegativeShowZeroResultTest(){
-        Assertions.assertEquals(0, Adder.adder(5,-5));
+        assertEquals(0, Adder.adder(5,-5).intValue());
     }
 
 }
